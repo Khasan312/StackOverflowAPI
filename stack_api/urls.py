@@ -19,10 +19,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from main.views import ProblemViewSet
+from main.views import *
 
 router = DefaultRouter()
 router.register('problems', ProblemViewSet)
+router.register('replies', ReplyViewSet)
+router.register('comments', CommentViewSet)
 
 
 urlpatterns = [

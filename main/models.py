@@ -40,6 +40,8 @@ class Reply(models.Model):
         return f'{self.body[:11]}...'
 
 
+
+
 class Comment(models.Model):
     comment = models.TextField()
     author = models.ForeignKey(CustomUser,
